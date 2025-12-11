@@ -1,11 +1,6 @@
 /* -----------------------------------------------------
    COLOR PALETTE
-   Deep Blue: #0A314C
-   Gold:      #D9A441
-   Light Gray:#F4F5F7
-   White:     #FFFFFF
 ------------------------------------------------------ */
-
 body {
     margin: 0;
     background: #E9EBEE;
@@ -14,56 +9,54 @@ body {
     line-height: 1.6;
 }
 
-/* -----------------------------------------------------
-   BOXED PAGE WRAPPER
------------------------------------------------------- */
-
+/* BOXED WRAPPER */
 .page-wrapper {
     max-width: 1100px;
     margin: 0 auto;
-    background: #FFFFFF;
+    background: #fff;
     box-shadow: 0 0 20px rgba(0,0,0,0.1);
 }
 
-/* -----------------------------------------------------
-   NAVIGATION
------------------------------------------------------- */
-
+/* NAVIGATION */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background: #0A314C;
-    color: white;
     padding: 15px 40px;
+    color: #fff;
 }
 
+/* LOGO PLACEHOLDER */
+.logo-container {
+    width: 180px;
+    height: 55px;
+}
+
+.campaign-logo {
+    width: 180px;
+    height: 55px;
+    object-fit: contain;
+}
+
+/* NAV LINKS */
 .navbar a {
-    color: white;
+    color: #fff;
     margin-left: 20px;
     text-decoration: none;
     font-weight: 500;
 }
 
-.logo {
-    font-weight: 700;
-    font-size: 18px;
-}
-
-/* -----------------------------------------------------
-   HERO SECTION
------------------------------------------------------- */
-
+/* HERO (Banner Placeholder 1600x600) */
 .hero {
     height: 55vh;
     background: linear-gradient(rgba(10,49,76,0.65), rgba(10,49,76,0.65)),
-        url('https://images.unsplash.com/photo-1535909339361-9b4f5c4f9c2b?auto=format&fit=crop&w=1950&q=80')
-        center/cover no-repeat;
+        url('Banner.png') center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
     text-align: center;
+    color: white;
     padding: 0 20px;
 }
 
@@ -72,52 +65,24 @@ body {
     margin-bottom: 15px;
 }
 
-.hero p {
-    max-width: 700px;
-    font-size: 20px;
-    margin-bottom: 25px;
-}
-
-.hero-buttons .btn-primary,
-.hero-buttons .btn-secondary {
-    margin: 6px;
-}
-
-/* -----------------------------------------------------
-   BUTTONS
------------------------------------------------------- */
-
+/* BUTTONS */
 .btn-primary {
     background: #D9A441;
     padding: 12px 25px;
     color: #0A314C;
     border-radius: 5px;
     text-decoration: none;
-    font-weight: 700;
-    display: inline-block;
+    font-weight: bold;
 }
 
-.btn-secondary {
-    padding: 12px 25px;
-    border: 2px solid #D9A441;
-    border-radius: 5px;
-    color: #D9A441;
-    text-decoration: none;
-    font-weight: 700;
-    display: inline-block;
-}
-
-/* -----------------------------------------------------
-   SECTION STYLES
------------------------------------------------------- */
-
+/* SECTIONS */
 .section {
     padding: 60px 40px;
 }
 
 .section h2 {
-    font-size: 32px;
     text-align: center;
+    font-size: 32px;
     margin-bottom: 20px;
 }
 
@@ -125,25 +90,18 @@ body {
     background: #F4F5F7;
 }
 
-/* -----------------------------------------------------
-   ABOUT BOX
------------------------------------------------------- */
-
+/* ABOUT BOX */
 .about-box {
     max-width: 800px;
+    background: white;
     margin: 0 auto;
-    background: #FFFFFF;
-    padding: 30px;
-    border-radius: 10px;
-    border-top: 5px solid #D9A441;
-    box-shadow: 0px 4px 15px rgba(0,0,0,0.08);
-    font-size: 17px;
+    padding: 30px 35px;
+    border-radius: 12px;
+    border-top: 6px solid #D9A441;
+    box-shadow: 0px 3px 15px rgba(0,0,0,0.1);
 }
 
-/* -----------------------------------------------------
-   GRID CARDS (PRIORITIES)
------------------------------------------------------- */
-
+/* GRID CARDS */
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -158,15 +116,7 @@ body {
     box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
-.card h3 {
-    margin-top: 0;
-    font-size: 20px;
-}
-
-/* -----------------------------------------------------
-   ACCOMPLISHMENTS LIST
------------------------------------------------------- */
-
+/* ACCOMPLISHMENTS */
 .accomplishments-list {
     max-width: 900px;
     margin: auto;
@@ -177,34 +127,17 @@ body {
 .accomplishments-list li {
     font-size: 18px;
     margin-bottom: 12px;
-    padding-left: 0;
 }
 
-/* -----------------------------------------------------
-   NEWS ITEMS
------------------------------------------------------- */
-
-.news-item {
-    max-width: 800px;
-    margin: auto;
-    margin-bottom: 20px;
-}
-
-.news-item h4 {
-    margin-bottom: 5px;
-    font-size: 20px;
-}
-
-/* -----------------------------------------------------
-   CONTACT FORM
------------------------------------------------------- */
-
+/* CONTACT FORM */
 .contact-message {
     font-size: 20px;
-    font-weight: 600;
-    text-align: center;
-    margin-bottom: 20px;
-    color: #0A314C;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: left;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .contact-form {
@@ -212,60 +145,20 @@ body {
     margin: auto;
 }
 
-.contact-form label {
-    font-weight: 600;
-    margin-bottom: 5px;
-    display: block;
-}
-
 .contact-form input,
 .contact-form textarea {
     width: 100%;
     padding: 12px;
     border-radius: 4px;
-    border: 1px solid #bbb;
+    border: 1px solid #ccc;
     margin-bottom: 15px;
     font-size: 16px;
 }
 
-.contact-form input:invalid {
-    border-color: red;
-}
-
-.contact-form textarea {
-    resize: vertical;
-}
-
-.social-links {
-    text-align: center;
-    margin-top: 25px;
-}
-
-.social-links a {
-    margin: 0 10px;
-    text-decoration: none;
-    color: #0A314C;
-    font-weight: 600;
-}
-
-/* -----------------------------------------------------
-   FOOTER
------------------------------------------------------- */
-
+/* FOOTER */
 footer {
-    text-align: center;
     background: #0A314C;
     color: white;
-    padding: 20px;
-    margin-top: 40px;
-}
-
-/* -----------------------------------------------------
-   RESPONSIVE STYLES
------------------------------------------------------- */
-
-@media (max-width: 700px) {
-    .hero h1 {
-        font-size: 32px;
-    }
+    text-align: center;
+    padding: 25px;
 }
