@@ -1,19 +1,34 @@
-/* COLOR PALETTE
+/* -----------------------------------------------------
+   COLOR PALETTE
    Deep Blue: #0A314C
    Gold:      #D9A441
    Light Gray:#F4F5F7
    White:     #FFFFFF
-*/
+------------------------------------------------------ */
 
 body {
     margin: 0;
+    background: #E9EBEE;
     font-family: "Segoe UI", Arial, sans-serif;
-    background: #ffffff;
     color: #0A314C;
     line-height: 1.6;
 }
 
-/* NAVIGATION */
+/* -----------------------------------------------------
+   BOXED PAGE WRAPPER
+------------------------------------------------------ */
+
+.page-wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    background: #FFFFFF;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+/* -----------------------------------------------------
+   NAVIGATION
+------------------------------------------------------ */
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -21,9 +36,6 @@ body {
     background: #0A314C;
     color: white;
     padding: 15px 40px;
-    position: sticky;
-    top: 0;
-    z-index: 10;
 }
 
 .navbar a {
@@ -38,10 +50,13 @@ body {
     font-size: 18px;
 }
 
-/* HERO */
+/* -----------------------------------------------------
+   HERO SECTION
+------------------------------------------------------ */
+
 .hero {
-    height: 65vh;
-    background: linear-gradient(rgba(10,49,76,0.7), rgba(10,49,76,0.7)),
+    height: 55vh;
+    background: linear-gradient(rgba(10,49,76,0.65), rgba(10,49,76,0.65)),
         url('https://images.unsplash.com/photo-1535909339361-9b4f5c4f9c2b?auto=format&fit=crop&w=1950&q=80')
         center/cover no-repeat;
     display: flex;
@@ -65,10 +80,13 @@ body {
 
 .hero-buttons .btn-primary,
 .hero-buttons .btn-secondary {
-    margin: 5px;
+    margin: 6px;
 }
 
-/* BUTTONS */
+/* -----------------------------------------------------
+   BUTTONS
+------------------------------------------------------ */
+
 .btn-primary {
     background: #D9A441;
     padding: 12px 25px;
@@ -76,6 +94,7 @@ body {
     border-radius: 5px;
     text-decoration: none;
     font-weight: 700;
+    display: inline-block;
 }
 
 .btn-secondary {
@@ -85,27 +104,49 @@ body {
     color: #D9A441;
     text-decoration: none;
     font-weight: 700;
+    display: inline-block;
 }
 
-/* SECTIONS */
+/* -----------------------------------------------------
+   SECTION STYLES
+------------------------------------------------------ */
+
 .section {
     padding: 60px 40px;
 }
 
 .section h2 {
     font-size: 32px;
-    margin-bottom: 20px;
     text-align: center;
+    margin-bottom: 20px;
 }
 
 .alt-bg {
     background: #F4F5F7;
 }
 
-/* GRID & CARDS */
+/* -----------------------------------------------------
+   ABOUT BOX
+------------------------------------------------------ */
+
+.about-box {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #FFFFFF;
+    padding: 30px;
+    border-radius: 10px;
+    border-top: 5px solid #D9A441;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.08);
+    font-size: 17px;
+}
+
+/* -----------------------------------------------------
+   GRID CARDS (PRIORITIES)
+------------------------------------------------------ */
+
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 25px;
 }
 
@@ -114,30 +155,67 @@ body {
     padding: 20px;
     border-radius: 8px;
     border-top: 4px solid #D9A441;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
+
+.card h3 {
+    margin-top: 0;
+    font-size: 20px;
+}
+
+/* -----------------------------------------------------
+   ACCOMPLISHMENTS LIST
+------------------------------------------------------ */
 
 .accomplishments-list {
     max-width: 900px;
     margin: auto;
+    list-style: none;
+    padding: 0;
 }
 
 .accomplishments-list li {
-    margin-bottom: 12px;
     font-size: 18px;
+    margin-bottom: 12px;
+    padding-left: 0;
 }
 
-/* NEWS */
+/* -----------------------------------------------------
+   NEWS ITEMS
+------------------------------------------------------ */
+
 .news-item {
     max-width: 800px;
     margin: auto;
     margin-bottom: 20px;
 }
 
-/* CONTACT FORM */
+.news-item h4 {
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+
+/* -----------------------------------------------------
+   CONTACT FORM
+------------------------------------------------------ */
+
+.contact-message {
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #0A314C;
+}
+
 .contact-form {
     max-width: 600px;
     margin: auto;
+}
+
+.contact-form label {
+    font-weight: 600;
+    margin-bottom: 5px;
+    display: block;
 }
 
 .contact-form input,
@@ -145,8 +223,17 @@ body {
     width: 100%;
     padding: 12px;
     border-radius: 4px;
-    border: 1px solid #ccc;
+    border: 1px solid #bbb;
     margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.contact-form input:invalid {
+    border-color: red;
+}
+
+.contact-form textarea {
+    resize: vertical;
 }
 
 .social-links {
@@ -161,7 +248,10 @@ body {
     font-weight: 600;
 }
 
-/* FOOTER */
+/* -----------------------------------------------------
+   FOOTER
+------------------------------------------------------ */
+
 footer {
     text-align: center;
     background: #0A314C;
@@ -170,7 +260,10 @@ footer {
     margin-top: 40px;
 }
 
-/* RESPONSIVE */
+/* -----------------------------------------------------
+   RESPONSIVE STYLES
+------------------------------------------------------ */
+
 @media (max-width: 700px) {
     .hero h1 {
         font-size: 32px;
