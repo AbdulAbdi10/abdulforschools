@@ -16,10 +16,10 @@
 
         <!-- LOGO -->
         <div class="logo-container">
-            <img src="abdulforschoollogo.png" alt="Campaign Logo" class="campaign-logo">
+            <img src="abdulforschoollogo.png" class="campaign-logo" alt="Campaign Logo" />
         </div>
 
-        <!-- DESKTOP NAV -->
+        <!-- DESKTOP NAVIGATION -->
         <nav class="nav-links">
             <a href="#about">About</a>
             <a href="#priorities">Priorities</a>
@@ -29,13 +29,12 @@
             <a href="#contact">Contact</a>
         </nav>
 
-        <!-- HAMBURGER ICON -->
-        <div class="hamburger" onclick="toggleMenu()">
-            ☰
-        </div>
+        <!-- MOBILE HAMBURGER -->
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+
     </header>
 
-    <!-- MOBILE DROPDOWN -->
+    <!-- MOBILE MENU (hidden on desktop) -->
     <div id="mobileMenu" class="mobile-menu">
         <a href="#about" onclick="toggleMenu()">About</a>
         <a href="#priorities" onclick="toggleMenu()">Priorities</a>
@@ -45,27 +44,26 @@
         <a href="#contact" onclick="toggleMenu()">Contact</a>
     </div>
 
-    <!-- HERO (BANNER) -->
+    <!-- HERO -->
     <section class="hero">
         <div class="hero-content">
             <h1>Re-Elect Abdul Abdi</h1>
-            <p>Strong leadership for Minneapolis Public Schools District 1—focused on academic excellence, safe schools, and transparent budgeting.</p>
-
+            <p>Strong leadership for Minneapolis Public Schools District 1—focused on academic excellence, safe schools, and transparent budget stewardship.</p>
             <div class="hero-buttons">
-                <a class="btn-primary" href="#donate">Donate</a>
-                <a class="btn-secondary" href="#volunteer">Volunteer</a>
-                <a class="btn-secondary" href="#endorsements">Endorse</a>
+                <a href="#donate" class="btn-primary">Donate</a>
+                <a href="#volunteer" class="btn-secondary">Volunteer</a>
+                <a href="#endorsements" class="btn-secondary">Endorse</a>
             </div>
         </div>
     </section>
 
-    <!-- ABOUT -->
+    <!-- ABOUT SECTION -->
     <section id="about" class="section">
         <h2>About Abdul Abdi</h2>
 
         <div class="about-box">
-            <p>Abdul Abdi serves as the Minneapolis Public Schools Board Director for District 1... (your text continues)</p>
-            <p>With deep family and community roots in Minneapolis... (your text continues)</p>
+            <p>Abdul Abdi serves as the Minneapolis Public Schools Board Director for District 1, representing the Northeast and Southeast communities...</p>
+            <p>With deep family and community roots in Minneapolis, Abdul has worked to strengthen schools and uplift families...</p>
         </div>
     </section>
 
@@ -74,10 +72,25 @@
         <h2>Priorities & Issues</h2>
 
         <div class="grid">
-            <div class="card"><h3>Academic Achievement</h3><p>Improving literacy, math, and intervention supports.</p></div>
-            <div class="card"><h3>Safe & Supportive Schools</h3><p>Strong school climate and mental health support.</p></div>
-            <div class="card"><h3>Family Engagement</h3><p>Strengthening communication and community trust.</p></div>
-            <div class="card"><h3>Budget Transparency</h3><p>Ensuring district funds directly support students.</p></div>
+            <div class="card">
+                <h3>Academic Achievement</h3>
+                <p>Improving literacy, math, and intervention supports.</p>
+            </div>
+
+            <div class="card">
+                <h3>Safe & Supportive Schools</h3>
+                <p>School climate and mental health supports.</p>
+            </div>
+
+            <div class="card">
+                <h3>Family Engagement</h3>
+                <p>Strengthening communication and community trust.</p>
+            </div>
+
+            <div class="card">
+                <h3>Budget Transparency</h3>
+                <p>Ensuring district funds support classrooms.</p>
+            </div>
         </div>
     </section>
 
@@ -85,10 +98,10 @@
     <section id="accomplishments" class="section">
         <h2>Accomplishments</h2>
         <ul class="accomplishments-list">
-            <li><strong>Budget leadership</strong> as Finance Chair</li>
-            <li><strong>CTE expansion</strong> at Edison</li>
-            <li><strong>Middle school arts</strong> advocacy</li>
-            <li><strong>District 1 school support</strong></li>
+            <li><strong>Budget leadership</strong> as Finance Chair.</li>
+            <li><strong>CTE expansion</strong> at Edison.</li>
+            <li><strong>Middle school arts</strong> advocacy.</li>
+            <li><strong>District 1 improvements</strong> and partnerships.</li>
         </ul>
     </section>
 
@@ -97,27 +110,31 @@
         <h2>Endorsements</h2>
 
         <div class="grid">
-            <div class="card"><h3>Parents</h3><p>“Abdul listens and delivers.”</p></div>
-            <div class="card"><h3>Educators</h3><p>“A partner for academic success.”</p></div>
-            <div class="card"><h3>Community Leaders</h3><p>“A unifying voice.”</p></div>
+            <div class="card"><h3>Parents</h3><p>"Abdul listens and delivers."</p></div>
+            <div class="card"><h3>Educators</h3><p>"A partner for academic success."</p></div>
+            <div class="card"><h3>Community Leaders</h3><p>"A unifying voice."</p></div>
         </div>
     </section>
 
     <!-- NEWS -->
     <section id="news" class="section">
         <h2>News & Updates</h2>
-        <div class="news-item"><h4>Budget Session – Dec 16</h4><p>Join Abdul at Edison High School.</p></div>
-        <div class="news-item"><h4>Community Engagement</h4><p>Meeting with families, educators, and students.</p></div>
+
+        <div class="news-item">
+            <h4>Budget Session – Dec 16</h4>
+            <p>Join Abdul at Edison High School.</p>
+        </div>
     </section>
 
-    <!-- CONTACT -->
+    <!-- CONTACT SECTION -->
     <section id="contact" class="section alt-bg">
         <h2>Contact</h2>
 
         <div class="contact-message">Have a question or want to get involved?</div>
 
-        <form class="contact-form" onsubmit="return validateCaptcha(event)">
-            <input type="hidden" name="_captcha" value="false">
+        <form class="contact-form" action="https://formsubmit.co/abdulforschools@gmail.com" method="POST">
+
+            <input type="hidden" name="_redirect" value="https://YOURDOMAIN.com/thankyou.html">
 
             <label>Full Name</label>
             <input type="text" name="name" required placeholder="John Doe">
@@ -126,21 +143,14 @@
             <input type="email" name="email" required placeholder="john@example.com">
 
             <label>Your Message</label>
-            <textarea name="message" rows="4" required placeholder="Write message here..."></textarea>
+            <textarea name="message" rows="4" required></textarea>
 
             <!-- CAPTCHA -->
             <label id="captchaLabel"></label>
-            <input type="number" id="captchaInput" required placeholder="Enter answer">
+            <input type="number" id="captchaInput" placeholder="Enter answer" oninput="checkCaptcha()">
 
-            <button class="btn-primary" type="submit">Send Message</button>
+            <button id="submitBtn" class="btn-primary" type="submit" disabled>Send Message</button>
         </form>
-
-        <!-- SUCCESS MESSAGE -->
-        <div id="thankYouMessage" class="hidden thank-you-box">
-            <h3>Thank you! Your message has been sent.</h3>
-            <a href="#" class="btn-primary" onclick="returnHome()">Return to Home</a>
-        </div>
-
     </section>
 
     <footer>
@@ -149,44 +159,26 @@
 
 </div>
 
-<!-- JAVASCRIPT SECTION -->
 <script>
-/* -------------------------
-   MOBILE MENU TOGGLE
--------------------------- */
+/* MOBILE MENU */
 function toggleMenu() {
     document.getElementById("mobileMenu").classList.toggle("open");
 }
 
-/* -------------------------
-   CAPTCHA GENERATOR
--------------------------- */
-let n1 = Math.floor(Math.random() * 10);
-let n2 = Math.floor(Math.random() * 10);
-document.getElementById("captchaLabel").innerText =
-    "What is " + n1 + " + " + n2 + "?";
+/* CAPTCHA */
+let a = Math.floor(Math.random() * 10);
+let b = Math.floor(Math.random() * 10);
+document.getElementById("captchaLabel").innerText = "What is " + a + " + " + b + "?";
 
-/* -------------------------
-   CAPTCHA VALIDATION + THANK YOU SCREEN
--------------------------- */
-function validateCaptcha(event) {
-    event.preventDefault();
+function checkCaptcha() {
+    const userAnswer = parseInt(document.getElementById("captchaInput").value);
+    const submitBtn = document.getElementById("submitBtn");
 
-    const answer = document.getElementById("captchaInput").value;
-    if (parseInt(answer) !== n1 + n2) {
-        alert("Incorrect answer. Try again.");
-        return false;
+    if (userAnswer === a + b) {
+        submitBtn.disabled = false;
+    } else {
+        submitBtn.disabled = true;
     }
-
-    /* Hide form, show thank-you message */
-    document.querySelector(".contact-form").style.display = "none";
-    document.getElementById("thankYouMessage").classList.remove("hidden");
-
-    return false; // Prevent actual submission (for now)
-}
-
-function returnHome() {
-    window.location.href = "#top";
 }
 </script>
 
